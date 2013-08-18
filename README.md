@@ -3,6 +3,8 @@ Infobar
 
 Modular informer for i3bar
 
+![](http://it-the-drote.tk/images/infobar.png?raw=true)
+
 This informer can show you any useful messages via plugins. The plugins can be written in **any programming language**: you just need to write to stdout a json-formatted string.
 
 Example:
