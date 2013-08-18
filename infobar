@@ -14,5 +14,5 @@ while [ true ]; do
 	done
 	echo -e ",[${jsonstring%,}]"
 	jsonstring=""
-	sleep 30
+	sleep 5
 done
