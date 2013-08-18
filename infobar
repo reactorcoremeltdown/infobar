@@ -3,7 +3,6 @@
 source $HOME/.i3/lib/bash/separator
 pluginsdir=$HOME"/.i3/plugins/"
 jsonstring=""
-curler="curl -m 5"
 
 echo '{ "version": 1 }'
 echo '['
