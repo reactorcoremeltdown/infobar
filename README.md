@@ -15,7 +15,7 @@ There are four items: a plugin name, a plugin text, a plugin color and a separat
 Installation
 ------------
 
-Just clone the repo and copy it's contents to ~/.i3, then add these lines into ~/.i3/config:
+Just clone the repo and copy its contents to *~/.i3*, then add these lines into *~/.i3/config*:
 
 ```
 bar {
@@ -24,5 +24,4 @@ bar {
 }
 ```
 
-
-
+Infobar takes each plugin name from *~/.i3/plugins/.order*. If you want to add your own plugin, you just need to put your plugin executable into *~/.i3/plugins* and add a line with plugin name into *~/.i3/plugins/.order*. Infobar executes its plugins in a sequental order.
