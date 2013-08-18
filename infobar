@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source $HOME/.i3/lib/bash/separator
-pluginsdir=$HOME"/.i3/plugins/"
+source $HOME/.infobar/lib/bash/separator
+pluginsdir=$HOME"/.infobar/plugins/"
 jsonstring=""
 
 echo '{ "version": 1 }'
@@ -12,8 +12,7 @@ while [ true ]; do
 	for i in `cat $pluginsdir"/.order"`; do
 		jsonstring=$jsonstring$separator`$pluginsdir$i`
 	done
-	jsonstring=`echo $jsonstring | sed -e 's/,$//'`
-	echo -e ",[$jsonstring]" 
+	echo -e ",[${jsonstring%,}]"
 	jsonstring=""
 	sleep 30
 done
