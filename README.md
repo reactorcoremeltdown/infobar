@@ -1,4 +1,4 @@
-i3-infobar
+Infobar
 ==========
 
 Modular informer for i3bar
@@ -15,13 +15,13 @@ There are four items: a plugin name, a plugin text, a plugin color and a separat
 Installation
 ------------
 
-Just clone the repo and copy its contents to *~/.i3*, then add these lines into *~/.i3/config*:
+Just clone the to *~/.infobar*, then add these lines into *~/.i3/config*:
 
 ```
 bar {
 	position top
-	status_command ~/.i3/infobar
+	status_command ~/.infobar/infobar
 }
 ```
 
-Infobar takes each plugin name from *~/.i3/plugins/.order*. If you want to add your own plugin, you just need to put your plugin executable into *~/.i3/plugins* and add a line with plugin name into *~/.i3/plugins/.order*. Infobar executes its plugins in a sequental order.
+Infobar takes each plugin name from *~/.infobar/plugins/.order*. If you want to add your own plugin, you just need to put your plugin executable into *~/.infobar/plugins* and add a line with plugin name into *~/.infobar/plugins/.order*. Infobar executes its plugins in a sequental order.
