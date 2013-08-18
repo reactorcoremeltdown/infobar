@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME"/.i3/lib/bash/jsonify"
+source $HOME"/.infobar/lib/bash/jsonify"
 pluginname="battery"
 
 if [[ $(acpitool -b | grep -oe "Charging") != "" ]]; then
