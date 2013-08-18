@@ -1,0 +1,4 @@
+function jsonify()
+{
+	echo -e "{ \"name\": \"$1\", \"full_text\": \"$2\", \"color\": \"$3\", \"separator\": false },"
+}

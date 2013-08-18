@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+source $HOME/.i3/lib/bash/separator
+pluginsdir=$HOME"/.i3/plugins/"
+jsonstring=""
+curler="curl -m 5"
+
+echo '{ "version": 1 }'
+echo '['
+echo '[]'
+
+while [ true ]; do
+	for i in `cat $pluginsdir"/.order"`; do
+		jsonstring=$jsonstring$separator`$pluginsdir$i`
+	done
+	jsonstring=`echo $jsonstring | sed -e 's/,$//'`
+	echo -e ",[$jsonstring]" 
+	jsonstring=""
+	sleep 30
+done
