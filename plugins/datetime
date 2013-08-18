@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+source $HOME"/.i3/lib/bash/jsonify"
+pluginname="datetime"
+plugintext=`date +\◔\ %H\:%M\ \ %a\ %d\ %B\ %y`
+plugincolor="#8080FF"
+
+jsonify "$pluginname" "$plugintext" "$plugincolor"

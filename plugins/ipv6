@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+source $HOME"/.i3/lib/bash/jsonify"
+curler="curl -m 5"
+pluginname="ipv6"
+
+if [[ $($curler -s "http://v4v6.ipv6-test.com/api/myip.php" | grep ':') != "" ]]; then
+	plugintext="✔ ipv6"
+	plugincolor="#0055D4"
+elif [[ $($curler -s "http://v4v6.ipv6-test.com/api/myip.php" | grep '.') != "" ]]; then
+	plugintext="✔ ipv4"
+	plugincolor="#FFCC00"
+else
+	plugintext="✘ no link"
+	plugincolor="#AA0000"
+fi
+
+jsonify "$pluginname" "$plugintext" "$plugincolor"

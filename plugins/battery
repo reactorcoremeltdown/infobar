@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+source $HOME"/.i3/lib/bash/jsonify"
+pluginname="battery"
+
+if [[ $(acpitool -b | grep -oe "Charging") != "" ]]; then
+	plugintext="⚡"`acpitool -b | cut -f 2 -d ',' | head -n 1`
+	plugincolor="#00FF00"
+else
+	plugintext="∞"`acpitool -b | cut -f 2 -d ',' | head -n 1`
+	plugincolor="#FF6600"
+fi
+
+jsonify "$pluginname" "$plugintext" "$plugincolor"
