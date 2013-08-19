@@ -17,7 +17,7 @@ There are four items: a plugin name, a plugin text, a plugin color and a separat
 Installation
 ------------
 
-Just clone the to *~/.infobar*, then add these lines into *~/.i3/config*:
+Just clone the repo to *~/.infobar*, then add these lines into *~/.i3/config*:
 
 ```
 bar {
