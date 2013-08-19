@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -x
+source $HOME"/.infobar/lib/bash/jsonify"
+curler="curl -m 5"
+pluginname="rur-usd"
+
+currency=`$curler -s http://www.cbr.ru/scripts/XML_daily.asp | sed -n 's:[Value/<>\t\r]::g;71p'`
+plugintext="USD: $currency RUR"
+plugincolor="#00FFFF"
+
+jsonify "$pluginname" "$plugintext" "$plugincolor"
