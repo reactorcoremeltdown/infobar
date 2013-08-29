@@ -2,3 +2,4 @@ config
 
 plugins/.order
 
+plugins/*.swp
