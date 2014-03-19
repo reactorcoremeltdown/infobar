@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+source $HOME"/.infobar/lib/bash/jsonify"
+pluginname="yandex-disk"
+plugincolor="#FF00FF"
+freespace=`yandex-disk status | grep Свободно | cut -f 2- -d ' '`
+syncstatus=`yandex-disk status | grep "Статус синхронизации" | cut -f 3- -d ' '`
+
+if [ -z $syncstatus ]; then
+	plugintext="Free: "$freespace
+else
+	plugintext="Free: "$freespace" Sync: "$syncstatus
+fi
+
+jsonify "$pluginname" "$plugintext" "$plugincolor"
