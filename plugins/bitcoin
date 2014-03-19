@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+source $HOME"/.infobar/lib/bash/jsonify"
+curler="curl -m 5 -s"
+pluginname="bitcoin"
+
+btc_usd=`$curler https://btc-e.com/api/2/btc_usd/ticker | cut -f 6 -d ',' | cut -f 2 -d ':'`
+btc_rur=`$curler https://btc-e.com/api/2/btc_rur/ticker | cut -f 6 -d ',' | cut -f 2 -d ':'`
+
+plugincolor="#FFCC00"
+
+plugintext="BTC: "$btc_usd"/"$btc_rur
+
+jsonify "$pluginname" "$plugintext" "$plugincolor"

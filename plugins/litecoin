@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+source $HOME"/.infobar/lib/bash/jsonify"
+curler="curl -m 5 -s"
+pluginname="litecoin"
+
+ltc_usd=`$curler https://btc-e.com/api/2/ltc_usd/ticker | cut -f 6 -d ',' | cut -f 2 -d ':'`
+ltc_rur=`$curler https://btc-e.com/api/2/ltc_rur/ticker | cut -f 6 -d ',' | cut -f 2 -d ':'`
+
+plugincolor="#FFCC00"
+
+plugintext="LTC: "$ltc_usd"/"$ltc_rur
+
+jsonify "$pluginname" "$plugintext" "$plugincolor"
