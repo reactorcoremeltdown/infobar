@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -x
-source $HOME"/.infobar/lib/bash/jsonify"
+source "./lib/bash/jsonify"
 curler="curl -m 5"
 pluginname="rur-usd"
 

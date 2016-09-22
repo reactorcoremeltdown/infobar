@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME"/.infobar/lib/bash/jsonify"
+source "./lib/bash/jsonify"
 curler="curl -m 5"
 pluginname="rur-uah"
 
