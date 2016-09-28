@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-source $HOME/.infobar/lib/bash/separator
-pluginsdir=$HOME"/.infobar/plugins/"
+pushd $(dirname $0) > /dev/null
+source ./lib/bash/separator
+pluginsdir="./plugins/"
 jsonstring=""
 
 echo '{ "version": 1 }'
